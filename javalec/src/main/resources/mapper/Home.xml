@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.mapper.HomeMapper">
+
+    <select id="getBpsMenus" parameterType="int" resultType="com.example.models.Menu">
+     /* HomeMapper.getBpsMenus [Home.xml]  : Bps 시스템 메뉴 조회*/
+     
+	    SELECT 
+	         menu_no
+	        ,menu_step
+	        ,up_menu_no
+	        ,menu_name
+		FROM MM_BPS_EX_MENU
+		where menu_no = #{menuNo}
+			
+    </select>
+
+</mapper>
